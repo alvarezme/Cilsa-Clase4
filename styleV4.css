@@ -1,0 +1,107 @@
+/* Variables base para el Estilo Normal */
+:root {
+    --fondo_pantalla: #f4f4f9;
+    --fondo_formulario: #ffffff;
+    --texto_principal: #333;
+    --color_resaltado: #4a90e2;
+    --color_bordes: #ccc;
+    --texto_boton: #ffffff;
+    --tamanio_letra: 1rem;
+}
+
+/* Modificación de variables para Alto Contraste */
+body.alto-contraste {
+    --fondo_pantalla: #000000;
+    --fondo_formulario: #1a1a1a;
+    --texto_principal: #ffffff;
+    --color_resaltado:yellow;
+    --color_bordes: #ffffff;
+    --texto_boton: #000000;
+    --tamanio_letra: 1.3rem;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--fondo_pantalla);
+    color: var(--texto_principal);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.formulario {
+    background-color: var(--fondo_formulario);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border: 2px solid var(--color_bordes);
+    width: 90%;
+    max-width: 400px;
+}
+
+h2 { 
+    text-align: center; 
+    margin-top: 0; 
+}
+
+.field { 
+    margin-bottom: 1rem; 
+}
+
+label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+input, select {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid var(--color_bordes);
+    border-radius: 6px;
+    background-color: var(--fondo_formulario);
+    color: var(--texto_principal);
+    box-sizing: border-box;
+    font-size: var(--tamanio_letra)
+}
+
+.botones {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-top: 2rem;
+}
+.selector-contraste {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+}
+
+button {
+    padding: .8rem;
+    cursor: pointer;
+    border: 2px solid var(--color_resaltado);
+    border-radius: 6px;
+    font-weight: bold;
+    font-size: var(--tamanio_letra);
+    color: var(--texto_principal);
+}
+
+.enviar{
+    background-color: var(--color_resaltado);
+    color: var(--texto_boton);
+}
+.normal{
+    background-color: var(--color_resaltado);
+    color: var(--texto_boton);
+}
+
+.contraste{
+    background-color: var(--color_resaltado);
+    color: var(--texto_boton);
+}
+button:hover {
+    opacity: 0.7;
+    transform: translateY(1px);
+}
